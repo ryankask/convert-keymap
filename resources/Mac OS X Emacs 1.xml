@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<keymap version="1" name="Mac OS X Emacs 1" parent="Mac OS X 10.5+">
+  <action id="$Delete">
+    <keyboard-shortcut first-keystroke="control G" />
+  </action>
+  <action id="$Paste">
+    <keyboard-shortcut first-keystroke="meta V" />
+    <keyboard-shortcut first-keystroke="control O" />
+  </action>
+  <action id="$Redo">
+    <keyboard-shortcut first-keystroke="shift meta Z" />
+    <keyboard-shortcut first-keystroke="shift alt BACK_SPACE" />
+    <keyboard-shortcut first-keystroke="control meta SLASH" />
+  </action>
+  <action id="$SelectAll">
+    <keyboard-shortcut first-keystroke="meta A" />
+    <keyboard-shortcut first-keystroke="control X" second-keystroke="H" />
+  </action>
+  <action id="$Undo">
+    <keyboard-shortcut first-keystroke="meta Z" />
+    <keyboard-shortcut first-keystroke="control SLASH" />
+    <keyboard-shortcut first-keystroke="shift control MINUS" />
+  </action>
+  <action id="CloseContent">
+    <keyboard-shortcut first-keystroke="meta W" />
+    <keyboard-shortcut first-keystroke="control X" second-keystroke="K" />
+  </action>
+  <action id="CodeCompletion">
+    <keyboard-shortcut first-keystroke="alt SLASH" />
+  </action>
+  <action id="Debug" />
+  <action id="Editor Delete">
+    <keyboard-shortcut first-keystroke="control G" />
+  </action>
+  <action id="Editor Paste">
+    <keyboard-shortcut first-keystroke="control O" />
+  </action>
+  <action id="Editor Redo">
+    <keyboard-shortcut first-keystroke="control meta SLASH" />
+  </action>
+  <action id="Editor SelectAll">
+    <keyboard-shortcut first-keystroke="control X" second-keystroke="H" />
+  </action>
+  <action id="Editor Undo">
+    <keyboard-shortcut first-keystroke="control SLASH" />
+    <keyboard-shortcut first-keystroke="shift control MINUS" />
+  </action>
+  <action id="EditorCutLineEnd">
+    <keyboard-shortcut first-keystroke="control N" />
+  </action>
+  <action id="EditorDeleteToWordStart" />
+  <action id="EditorDown">
+    <keyboard-shortcut first-keystroke="DOWN" />
+    <keyboard-shortcut first-keystroke="control J" />
+  </action>
+  <action id="EditorEscape">
+    <keyboard-shortcut first-keystroke="ESCAPE" />
+    <keyboard-shortcut first-keystroke="control T" />
+  </action>
+  <action id="EditorKillRegion">
+    <keyboard-shortcut first-keystroke="control W" />
+  </action>
+  <action id="EditorKillRingSave">
+    <keyboard-shortcut first-keystroke="alt W" />
+  </action>
+  <action id="EditorKillToWordEnd">
+    <keyboard-shortcut first-keystroke="alt G" />
+  </action>
+  <action id="EditorKillToWordStart">
+    <keyboard-shortcut first-keystroke="alt BACK_SPACE" />
+  </action>
+  <action id="EditorLineEnd">
+    <keyboard-shortcut first-keystroke="END" />
+    <keyboard-shortcut first-keystroke="meta RIGHT" />
+    <keyboard-shortcut first-keystroke="control K" />
+  </action>
+  <action id="EditorNextWordInDifferentHumpsMode">
+    <keyboard-shortcut first-keystroke="alt E" />
+  </action>
+  <action id="EditorPageDown">
+    <keyboard-shortcut first-keystroke="PAGE_DOWN" />
+    <keyboard-shortcut first-keystroke="control V" />
+  </action>
+  <action id="EditorPageUp">
+    <keyboard-shortcut first-keystroke="PAGE_UP" />
+    <keyboard-shortcut first-keystroke="alt V" />
+  </action>
+  <action id="EditorPreviousWordInDifferentHumpsMode">
+    <keyboard-shortcut first-keystroke="alt B" />
+  </action>
+  <action id="EditorRight">
+    <keyboard-shortcut first-keystroke="RIGHT" />
+    <keyboard-shortcut first-keystroke="control E" />
+  </action>
+  <action id="EditorTab" />
+  <action id="EditorToggleStickySelection">
+    <keyboard-shortcut first-keystroke="control SPACE" />
+  </action>
+  <action id="EditorUp">
+    <keyboard-shortcut first-keystroke="UP" />
+    <keyboard-shortcut first-keystroke="control R" />
+  </action>
+  <action id="EmacsStyleIndent">
+    <keyboard-shortcut first-keystroke="TAB" />
+  </action>
+  <action id="FillParagraph">
+    <keyboard-shortcut first-keystroke="alt BACK_QUOTE" />
+  </action>
+  <action id="GotoFile">
+    <keyboard-shortcut first-keystroke="shift meta O" />
+    <keyboard-shortcut first-keystroke="control X" second-keystroke="control E" />
+  </action>
+  <action id="GuiDesigner.QuickJavadoc">
+    <keyboard-shortcut first-keystroke="F1" />
+    <mouse-shortcut keystroke="control button2" />
+  </action>
+  <action id="HippieCompletion" />
+  <action id="NextTab">
+    <keyboard-shortcut first-keystroke="shift meta CLOSE_BRACKET" />
+    <keyboard-shortcut first-keystroke="control RIGHT" />
+    <keyboard-shortcut first-keystroke="control X" second-keystroke="N" />
+    <keyboard-shortcut first-keystroke="control X" second-keystroke="O" />
+  </action>
+  <action id="PasteMultiple">
+    <keyboard-shortcut first-keystroke="shift meta V" />
+    <keyboard-shortcut first-keystroke="control meta O" />
+  </action>
+  <action id="PreviousTab">
+    <keyboard-shortcut first-keystroke="shift meta OPEN_BRACKET" />
+    <keyboard-shortcut first-keystroke="control LEFT" />
+    <keyboard-shortcut first-keystroke="control X" second-keystroke="P" />
+  </action>
+  <action id="QuickJavaDoc">
+    <keyboard-shortcut first-keystroke="F1" />
+    <mouse-shortcut keystroke="control button2" />
+  </action>
+  <action id="Refactorings.QuickListPopupAction" />
+  <action id="Run" />
+  <action id="SaveAll">
+    <keyboard-shortcut first-keystroke="meta S" />
+    <keyboard-shortcut first-keystroke="control X" second-keystroke="control D" />
+  </action>
+  <action id="SwitchApply">
+    <keyboard-shortcut first-keystroke="control alt ENTER" />
+  </action>
+  <action id="SwitchDown">
+    <keyboard-shortcut first-keystroke="control alt DOWN" />
+  </action>
+  <action id="SwitchLeft">
+    <keyboard-shortcut first-keystroke="control alt LEFT" />
+  </action>
+  <action id="SwitchRight">
+    <keyboard-shortcut first-keystroke="control alt RIGHT" />
+  </action>
+  <action id="SwitchUp">
+    <keyboard-shortcut first-keystroke="control alt UP" />
+  </action>
+  <action id="Switcher">
+    <keyboard-shortcut first-keystroke="control X" second-keystroke="B" />
+    <keyboard-shortcut first-keystroke="control D" />
+  </action>
+  <action id="Vcs.QuickListPopupAction" />
+</keymap>
+
