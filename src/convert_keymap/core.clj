@@ -2,8 +2,29 @@
   (:require [clojure.java.io :as io]
             [clojure.zip :as zip]
             [clojure.data.zip.xml :as zxml]
-            [clojure.data.xml :as xml])
+            [clojure.data.xml :as xml]
+            [clojure.string :as str])
   (:gen-class))
+
+(def ^:const keystroke-attrs [:first-keystroke :second-keystroke])
+(def ^:const qwerty-to-colemak
+  {\E \F
+   \R \P
+   \T \G
+   \Y \J
+   \U \L
+   \I \U
+   \O \Y
+   \P \;
+   \S \R
+   \D \S
+   \F \T
+   \G \D
+   \J \N
+   \K \E
+   \L \I
+   \; \O
+   \N \K})
 
 (def sample-keymap-file (io/resource "Mac OS X Emacs 1.xml"))
 
@@ -16,9 +37,20 @@
   (let [tag (:tag (zip/node loc))]
     (= :keyboard-shortcut tag)))
 
+(defn keystroke-replacer [[_ modifier ch]]
+  (str modifier " " (or (-> ch
+                            (.charAt 0)
+                            qwerty-to-colemak)
+                        ch)))
+
+(defn replace-keystroke [keystroke]
+  (str/replace-first keystroke #"(control|alt|meta) ([A-Z])$" keystroke-replacer))
+
 (defn edit-shortcut [node]
-  (println (-> node :attrs :first-keystroke))
-  node)
+  (assoc node :attrs (into {} (map (fn [keystroke]
+                                     (when-let [k (keystroke (:attrs node))]
+                                       [keystroke (replace-keystroke k)]))
+                                   keystroke-attrs))))
 
 (defn convert-keyboard-shortcuts [keymap-xml]
   (let [keymap-zip (zip/xml-zip keymap-xml)]
@@ -35,11 +67,18 @@
       (#(.. % (resolveSibling (str (.getFileName %) ".converted"))))
       .toFile))
 
+(defn prettier-xml [xml-str]
+  (-> xml-str
+      (str/replace-first "?><" "?>\n<")
+      (str/replace "\"/>" "\" />")))
+
 (defn write-keymap [keymap-file new-keymap-xml]
   (with-open [output (-> keymap-file
                          make-new-keymap-file
                          io/writer)]
-    (xml/indent new-keymap-xml output)))
+    (.write output (-> new-keymap-xml
+                       xml/indent-str
+                       prettier-xml))))
 
 (defn convert-keymap [keymap-path]
   (let [keymap-file (io/file keymap-path)]
